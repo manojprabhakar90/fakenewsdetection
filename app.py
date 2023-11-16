@@ -10,7 +10,8 @@ nltk.download('punkt')
 nltk.download('stopwords')
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.saved_model.load('./saved_model.pb')
+    model = tf.saved_model.load('saved_model.pb')
+    print("TensorFlow Model Loaded")
     return model
 
 def preprocess_text(text):
